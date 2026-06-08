@@ -412,3 +412,6 @@ body.force-mobile .projects,
 body.force-mobile .advantages { grid-template-columns: 1fr; }
 body.force-mobile .marquee__track span { font-size: 1.05rem; }
 body.force-mobile .contact__inner { padding: 48px 22px; border-radius: 24px; }
+/* Кнопки прижимаем к углам телефонного фрейма */
+body.force-mobile .to-top { right: max(18px, calc(50vw - 197px)); }
+body.force-mobile .mobile-toggle { left: max(18px, calc(50vw - 197px)); }
