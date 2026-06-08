@@ -330,6 +330,8 @@ h1, h2, h3, .nav__logo { font-family: "Sora", "Manrope", sans-serif; }
   .section { padding: 84px 0; }
   .hero__stats { gap: 34px; }
   .hero__grid { grid-template-columns: 1fr; gap: 48px; text-align: center; }
+  .hero__title { font-size: clamp(2.2rem, 11vw, 3.1rem); letter-spacing: -1px; overflow-wrap: break-word; }
+  .hero__subtitle { font-size: clamp(1.1rem, 5vw, 1.5rem); }
   .hero__photo { order: -1; justify-content: center; }
   .hero__photo-wrap { max-width: 300px; }
   .hero__actions { justify-content: center; }
@@ -380,6 +382,8 @@ body.force-mobile .nav__links.open {
 }
 body.force-mobile .hero { min-height: auto; padding: 56px 20px 70px; }
 body.force-mobile .hero__grid { grid-template-columns: 1fr; gap: 44px; text-align: center; padding: 0 20px; }
+body.force-mobile .hero__title { font-size: 2.7rem; letter-spacing: -1px; word-break: normal; overflow-wrap: break-word; }
+body.force-mobile .hero__subtitle { font-size: 1.3rem; }
 body.force-mobile .hero__photo { order: -1; justify-content: center; }
 body.force-mobile .hero__photo-wrap { max-width: 280px; }
 body.force-mobile .hero__actions,
