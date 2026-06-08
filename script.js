@@ -15,6 +15,27 @@ navLinks.querySelectorAll("a").forEach((link) =>
   link.addEventListener("click", () => navLinks.classList.remove("open"))
 );
 
+// Переключение мобильной версии
+const mobileToggle = document.getElementById("mobileToggle");
+const mobileLabel = mobileToggle.querySelector(".mobile-toggle__label");
+const mobileIcon = mobileToggle.querySelector(".mobile-toggle__icon");
+
+const applyMobileMode = (on) => {
+  document.body.classList.toggle("force-mobile", on);
+  document.documentElement.classList.toggle("force-mobile-html", on);
+  mobileLabel.textContent = on ? "Полная версия" : "Мобильная версия";
+  mobileIcon.textContent = on ? "💻" : "📱";
+};
+
+applyMobileMode(localStorage.getItem("viewMode") === "mobile");
+
+mobileToggle.addEventListener("click", () => {
+  const on = !document.body.classList.contains("force-mobile");
+  applyMobileMode(on);
+  localStorage.setItem("viewMode", on ? "mobile" : "full");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
 // Плавное появление блоков при прокрутке
 const observer = new IntersectionObserver(
   (entries) => {

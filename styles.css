@@ -340,3 +340,56 @@ h1, h2, h3, .nav__logo { font-family: "Sora", "Manrope", sans-serif; }
   .marquee__track span { font-size: 1.05rem; }
   .contact__inner { padding: 60px 24px; border-radius: 28px; }
 }
+
+/* ---------- Кнопка переключения на мобильную версию ---------- */
+.mobile-toggle {
+  position: fixed; left: 18px; bottom: 18px; z-index: 300;
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 12px 18px; border-radius: 999px; border: none; cursor: pointer;
+  background: var(--ink); color: #fff; font-family: inherit; font-weight: 700; font-size: .9rem;
+  box-shadow: 0 14px 34px rgba(22, 36, 43, 0.3); transition: transform .2s, background .2s;
+}
+.mobile-toggle:hover { transform: translateY(-3px); background: var(--accent); }
+.mobile-toggle__icon { font-size: 1.05rem; }
+
+/* На реальных телефонах кнопка не нужна */
+@media (max-width: 760px) { .mobile-toggle { display: none; } }
+
+/* ---------- Принудительная мобильная версия (телефонный фрейм) ---------- */
+html.force-mobile-html { background: var(--bg); }
+body.force-mobile {
+  max-width: 430px; margin: 0 auto; min-height: 100vh; position: relative;
+  background: var(--bg); overflow-x: hidden;
+  box-shadow: 0 0 0 10px #11181c, 0 40px 90px rgba(0, 0, 0, 0.45);
+}
+body.force-mobile .nav {
+  position: sticky; padding: 14px 20px;
+  background: rgba(238, 244, 243, 0.92); backdrop-filter: blur(12px);
+  box-shadow: 0 6px 20px rgba(22, 36, 43, 0.05);
+}
+body.force-mobile .nav__burger { display: flex; z-index: 101; }
+body.force-mobile .nav__links {
+  position: absolute; top: 100%; left: 0; right: 0; width: 100%; max-width: none; inset: auto;
+  flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 18px;
+  padding: 24px; background: #fff; box-shadow: var(--shadow);
+  transform: translateY(-14px); opacity: 0; pointer-events: none; transition: .3s;
+}
+body.force-mobile .nav__links.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+body.force-mobile .hero { min-height: auto; padding: 56px 20px 70px; }
+body.force-mobile .hero__grid { grid-template-columns: 1fr; gap: 44px; text-align: center; padding: 0 20px; }
+body.force-mobile .hero__photo { order: -1; justify-content: center; }
+body.force-mobile .hero__photo-wrap { max-width: 280px; }
+body.force-mobile .hero__actions,
+body.force-mobile .hero__stats { justify-content: center; flex-wrap: wrap; }
+body.force-mobile .hero__stats { gap: 24px; }
+body.force-mobile .float-card--top { left: -6px; top: 12px; }
+body.force-mobile .float-card--bottom { right: -6px; bottom: 14px; }
+body.force-mobile .float-card { padding: 10px 13px; }
+body.force-mobile .section { padding: 56px 0; }
+body.force-mobile .container { padding: 0 20px; }
+body.force-mobile .about,
+body.force-mobile .cards,
+body.force-mobile .projects,
+body.force-mobile .advantages { grid-template-columns: 1fr; }
+body.force-mobile .marquee__track span { font-size: 1.05rem; }
+body.force-mobile .contact__inner { padding: 48px 22px; border-radius: 24px; }
