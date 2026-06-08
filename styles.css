@@ -364,18 +364,21 @@ body.force-mobile {
   box-shadow: 0 0 0 10px #11181c, 0 40px 90px rgba(0, 0, 0, 0.45);
 }
 body.force-mobile .nav {
-  position: sticky; padding: 14px 20px;
-  background: rgba(238, 244, 243, 0.92); backdrop-filter: blur(12px);
+  position: sticky; padding: 14px 20px; flex-wrap: wrap;
+  background: rgba(238, 244, 243, 0.95); backdrop-filter: blur(12px);
   box-shadow: 0 6px 20px rgba(22, 36, 43, 0.05);
 }
 body.force-mobile .nav__burger { display: flex; z-index: 101; }
 body.force-mobile .nav__links {
-  position: absolute; top: 100%; left: 0; right: 0; width: 100%; max-width: none; inset: auto;
-  flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 18px;
-  padding: 24px; background: #fff; box-shadow: var(--shadow);
-  transform: translateY(-14px); opacity: 0; pointer-events: none; transition: .3s;
+  position: static; flex-basis: 100%; width: 100%; max-width: none; transform: none;
+  flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 16px;
+  max-height: 0; overflow: hidden; opacity: 0; padding: 0;
+  transition: max-height .35s ease, opacity .3s ease, padding .35s ease;
 }
-body.force-mobile .nav__links.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+body.force-mobile .nav__links.open {
+  max-height: 75vh; opacity: 1; padding: 18px 2px 4px; overflow-y: auto;
+  border-top: 1px solid var(--card-border); margin-top: 12px;
+}
 body.force-mobile .hero { min-height: auto; padding: 56px 20px 70px; }
 body.force-mobile .hero__grid { grid-template-columns: 1fr; gap: 44px; text-align: center; padding: 0 20px; }
 body.force-mobile .hero__photo { order: -1; justify-content: center; }
