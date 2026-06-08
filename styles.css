@@ -124,24 +124,24 @@ h1, h2, h3, .nav__logo { font-family: "Sora", "Manrope", sans-serif; }
 /* плавающие стеклянные карточки */
 .float-card {
   position: absolute; z-index: 2;
-  display: flex; align-items: center; gap: 10px;
-  padding: 12px 16px; border-radius: 16px;
+  display: flex; align-items: center; gap: 7px;
+  padding: 8px 11px; border-radius: 13px;
   background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 14px 40px rgba(28, 26, 38, 0.14);
+  box-shadow: 0 10px 30px rgba(28, 26, 38, 0.14);
   animation: bob 4s ease-in-out infinite;
 }
-.float-card b { display: block; font-size: .92rem; font-weight: 800; line-height: 1.2; }
-.float-card small { color: var(--muted); font-size: .78rem; font-weight: 600; }
-.float-card--top { top: 26px; left: -34px; }
-.float-card--bottom { bottom: 30px; right: -28px; animation-delay: -2s; }
+.float-card b { display: block; font-size: .76rem; font-weight: 800; line-height: 1.2; }
+.float-card small { color: var(--muted); font-size: .66rem; font-weight: 600; }
+.float-card--top { top: 20px; left: -24px; }
+.float-card--bottom { bottom: 24px; right: -20px; animation-delay: -2s; }
 .float-card__dot {
-  width: 12px; height: 12px; border-radius: 50%; background: #2bd46b;
-  box-shadow: 0 0 0 4px rgba(43, 212, 107, 0.22); flex-shrink: 0;
+  width: 9px; height: 9px; border-radius: 50%; background: #2bd46b;
+  box-shadow: 0 0 0 3px rgba(43, 212, 107, 0.22); flex-shrink: 0;
 }
 .float-card__icon {
-  width: 34px; height: 34px; border-radius: 10px; display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem; background: linear-gradient(135deg, #d9f3ed, #ffe7e1); flex-shrink: 0;
+  width: 27px; height: 27px; border-radius: 8px; display: flex; align-items: center; justify-content: center;
+  font-size: .9rem; background: linear-gradient(135deg, #d9f3ed, #ffe7e1); flex-shrink: 0;
 }
 @keyframes bob {
   0%, 100% { transform: translateY(0); }
@@ -334,10 +334,9 @@ h1, h2, h3, .nav__logo { font-family: "Sora", "Manrope", sans-serif; }
   .hero__photo-wrap { max-width: 300px; }
   .hero__actions { justify-content: center; }
   .hero__stats { justify-content: center; }
-  .float-card--top { left: 8px; top: 10px; }
-  .float-card--bottom { right: 8px; bottom: 12px; }
-  .float-card { padding: 9px 12px; }
-  .float-card small { font-size: .72rem; }
+  .float-card--top { left: 6px; top: 8px; }
+  .float-card--bottom { right: 6px; bottom: 10px; }
+  .float-card { padding: 7px 10px; }
   .marquee__track span { font-size: 1.05rem; }
   .contact__inner { padding: 60px 24px; border-radius: 28px; }
 }
