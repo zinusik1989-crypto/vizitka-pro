@@ -385,10 +385,9 @@ body.force-mobile .hero__photo-wrap { max-width: 280px; }
 body.force-mobile .hero__actions,
 body.force-mobile .hero__stats { justify-content: center; flex-wrap: wrap; }
 body.force-mobile .hero__stats { gap: 24px; }
-body.force-mobile .float-card--top { left: 8px; top: 10px; }
-body.force-mobile .float-card--bottom { right: 8px; bottom: 12px; }
-body.force-mobile .float-card { padding: 9px 12px; }
-body.force-mobile .float-card small { font-size: .72rem; }
+body.force-mobile .float-card--top { left: 6px; top: 8px; }
+body.force-mobile .float-card--bottom { right: 6px; bottom: 10px; }
+body.force-mobile .float-card { padding: 7px 10px; }
 body.force-mobile .section { padding: 56px 0; }
 body.force-mobile .container { padding: 0 20px; }
 body.force-mobile .about,
