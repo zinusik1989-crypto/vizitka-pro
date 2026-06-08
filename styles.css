@@ -354,6 +354,18 @@ h1, h2, h3, .nav__logo { font-family: "Sora", "Manrope", sans-serif; }
 .mobile-toggle:hover { transform: translateY(-3px); background: var(--accent); }
 .mobile-toggle__icon { font-size: 1.05rem; }
 
+/* ---------- Кнопка «Наверх» ---------- */
+.to-top {
+  position: fixed; right: 18px; bottom: 18px; z-index: 300;
+  width: 50px; height: 50px; border-radius: 50%; border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; color: #fff;
+  background: var(--grad); box-shadow: 0 14px 34px rgba(14, 169, 143, 0.4);
+  opacity: 0; visibility: hidden; transform: translateY(16px);
+  transition: opacity .3s, transform .3s, visibility .3s, box-shadow .2s;
+}
+.to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.to-top:hover { transform: translateY(-3px); box-shadow: 0 18px 42px rgba(255, 111, 89, 0.45); }
+
 /* На реальных телефонах кнопка не нужна */
 @media (max-width: 760px) { .mobile-toggle { display: none; } }
 

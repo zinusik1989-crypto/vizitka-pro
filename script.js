@@ -36,6 +36,15 @@ mobileToggle.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+// Кнопка «Наверх»
+const toTop = document.getElementById("toTop");
+const onScrollTop = () => toTop.classList.toggle("visible", window.scrollY > 400);
+onScrollTop();
+window.addEventListener("scroll", onScrollTop);
+toTop.addEventListener("click", () =>
+  window.scrollTo({ top: 0, behavior: "smooth" })
+);
+
 // Плавное появление блоков при прокрутке
 const observer = new IntersectionObserver(
   (entries) => {
